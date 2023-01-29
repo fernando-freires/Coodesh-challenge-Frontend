@@ -45,14 +45,16 @@ const LocationsTable = () => {
                     <DialogEdit
                       type="Local"
                       localId={location.id}
-                      locationName={location.name}
                       idCompany={location.companyId}
-                    />
-                    <DialogDelete
-                      type="Local"
-                      localId={location.id}
                       locationName={location.name}
+                      localCep={location.cep}
+                      localStreet={location.street}
+                      localNumber={location.number}
+                      LocalNeighborhood={location.neighborhood}
+                      localCity={location.city}
+                      localUf={location.UF}
                     />
+                    <DialogDelete type="Local" localId={location.id} />
                   </Actions>
                 </Location>
               ))}

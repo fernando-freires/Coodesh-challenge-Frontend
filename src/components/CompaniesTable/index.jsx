@@ -63,6 +63,8 @@ const CompaniesTable = (props) => {
                       type="Empresa"
                       companyId={company.id}
                       companyName={company.name}
+                      companyWebsite={company.website}
+                      companyCnpj={company.cnpj}
                     />
                     <img
                       src={Locations}

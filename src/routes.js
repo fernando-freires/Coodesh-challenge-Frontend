@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 
-// import Login from './pages/Login';
-import Users from './pages/Users';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import Companies from './pages/Companies';
@@ -36,8 +34,6 @@ export default function Routes() {
         path="/locations/:id"
         component={Locations}
       />
-      <CustomRoute exact isPrivate path="/login" component={Login} />
-      <CustomRoute exact isPrivate path="/users" component={Users} />
     </Switch>
   );
 }

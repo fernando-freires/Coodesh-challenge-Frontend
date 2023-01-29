@@ -25,6 +25,7 @@ export const Container = styled.div`
       line-height: 20px;
       text-align: center;
       color: #4d4d4d;
+      margin-top: 1em;
     }
   }
 `;
