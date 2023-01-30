@@ -3,7 +3,7 @@ import { IoMdArrowBack } from 'react-icons/io';
 import HeaderComponent from '../../components/Header';
 import LocationsTable from '../../components/LocationsTable';
 import history from '../../history';
-import { Container, NoLocations } from './styles';
+import { Container, WithLocations } from './styles';
 
 const Locations = () => {
   const handleClick = () => {
@@ -19,9 +19,9 @@ const Locations = () => {
           Minhas Empresas
         </p>
       </div>
-      <NoLocations>
+      <WithLocations>
         <LocationsTable />
-      </NoLocations>
+      </WithLocations>
     </Container>
   );
 };

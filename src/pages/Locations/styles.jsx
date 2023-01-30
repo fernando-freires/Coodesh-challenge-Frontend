@@ -30,7 +30,7 @@ export const Container = styled.div`
   }
 `;
 
-export const NoLocations = styled.div`
+export const WithLocations = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
