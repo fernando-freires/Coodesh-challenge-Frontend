@@ -24,3 +24,5 @@ Projeto desenvolvido com objetivo de fazer cadastro de empresas e de locais pert
 3. Deve-se rodar o backend (instruções no readme do backend)
    > Backend [backend](https://github.com/fernando-freires/Coodesh-challenge-Backend)
 4. Após todas as dependências instaladas, rodar o comando 'npm run start' no terminal para iniciar a aplicação
+
+> Link para a apresentação do projeto [Clique aqui!](https://www.loom.com/share/870fc5fe02b545248ab0be5005dd494c)
