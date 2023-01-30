@@ -6,7 +6,7 @@ import DialogTitle from '@mui/material/DialogTitle';
 import React, { useState } from 'react';
 import api from '../../../api';
 import Trash from '../../../assets/imgs/Trash.png';
-import { Image } from './styles';
+import CustomizedSnackbars from '../../../components/Feedbacks';
 
 export default function DialogDelete(props) {
   const [open, setOpen] = useState(false);
@@ -17,8 +17,11 @@ export default function DialogDelete(props) {
   const [localId, setLocalId] = useState(props.localId);
   const [localName, setLocalName] = useState(props.locationName);
 
+  const [state, setState] = useState(false);
+
   const handleClickOpen = () => {
     setOpen(true);
+    setState(true);
   };
 
   const handleClose = () => {
@@ -38,11 +41,13 @@ export default function DialogDelete(props) {
   return (
     <div>
       <img src={Trash} alt="" onClick={handleClickOpen} />
+
       <Dialog open={open} onClose={handleClose}>
         {type === 'Empresa' && (
           <>
             <DialogTitle>
-              A empresa {companyName} será excluída. Tem certeza dessa opção
+              A empresa <b>{companyName}</b> será excluída. Tem certeza dessa
+              ação?
             </DialogTitle>
             <DialogContent>
               <DialogActions>
@@ -54,6 +59,11 @@ export default function DialogDelete(props) {
                   Excluir
                 </Button>
               </DialogActions>
+              <CustomizedSnackbars
+                message="Realmente deseja excluir?"
+                type="warning"
+                state={state}
+              />
             </DialogContent>
           </>
         )}
@@ -61,7 +71,7 @@ export default function DialogDelete(props) {
         {type === 'Local' && (
           <DialogContent>
             <DialogTitle>
-              O local {localName} será excluído. Tem certeza dessa opção
+              O local <b>{localName}</b> será excluído. Tem certeza dessa ação?
             </DialogTitle>
             <DialogActions>
               <Button
@@ -72,6 +82,11 @@ export default function DialogDelete(props) {
                 Excluir
               </Button>
             </DialogActions>
+            <CustomizedSnackbars
+              message="Realmente deseja excluir?"
+              type="warning"
+              state={state}
+            />
           </DialogContent>
         )}
       </Dialog>

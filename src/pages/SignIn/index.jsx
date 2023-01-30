@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Image1 from '../../assets/imgs/Image1.png';
 import Logo from '../../assets/imgs/Logo.png';
 import { Context } from '../../context/AuthContext';
+import history from '../../history';
 import {
   Aside,
   CompanyLogo,
@@ -15,7 +15,6 @@ import {
   LoginButton,
   RegisterButton,
 } from './styles';
-import history from '../../history';
 
 const SignIn = () => {
   const { handleLogin } = useContext(Context);
@@ -56,7 +55,6 @@ const SignIn = () => {
               onChange={(e) => setPassword(e.target.value)}
             />
           </InputText>
-
           <LoginButton onClick={() => handleLogin(access)}>Login</LoginButton>
           <RegisterButton onClick={() => history.push('/sign-up')}>
             Criar conta

@@ -3,9 +3,10 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import api from '../../../api';
 import Edit from '../../../assets/imgs/Edit.png';
+import CustomizedSnackbars from '../../Feedbacks';
 import { InputText } from './styles';
 
 export default function DialogEdit(props) {
@@ -19,6 +20,8 @@ export default function DialogEdit(props) {
   const [cnpj, setCnpj] = useState(props.companyCnpj);
   const [local, setLocal] = useState({});
 
+  const [state, setState] = useState(false);
+
   const [companyId, setCompanyId] = useState(props.companyId);
   const [localId, setLocalId] = useState(props.localId);
   const [localName, setLocalName] = useState(props.locationName);
@@ -31,6 +34,7 @@ export default function DialogEdit(props) {
 
   const handleClickOpen = async () => {
     setOpen(true);
+    setState(true);
   };
 
   const handleClose = () => {
@@ -103,6 +107,11 @@ export default function DialogEdit(props) {
                 Editar
               </Button>
             </DialogActions>
+            <CustomizedSnackbars
+              message="Altere os dados que desejar!"
+              type="info"
+              state={state}
+            />
           </DialogContent>
         )}
 
@@ -181,6 +190,11 @@ export default function DialogEdit(props) {
                 Salvar
               </Button>
             </DialogActions>
+            <CustomizedSnackbars
+              message="Altere os dados que desejar!"
+              type="info"
+              state={state}
+            />
           </DialogContent>
         )}
       </Dialog>

@@ -54,7 +54,11 @@ const LocationsTable = () => {
                       localCity={location.city}
                       localUf={location.UF}
                     />
-                    <DialogDelete type="Local" localId={location.id} />
+                    <DialogDelete
+                      type="Local"
+                      localId={location.id}
+                      locationName={location.name}
+                    />
                   </Actions>
                 </Location>
               ))}
