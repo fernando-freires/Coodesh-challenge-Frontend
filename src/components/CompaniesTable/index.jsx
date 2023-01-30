@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../api';
-import DialogCreate from '../Dialogs/DialogCreate';
-import DialogEdit from '../Dialogs/DialogEdit/';
-import DialogDelete from '../Dialogs/DialogDelete/';
 import Locations from '../../assets/imgs/Locations.png';
 import history from '../../history';
+import DialogCreate from '../Dialogs/DialogCreate';
+import DialogDelete from '../Dialogs/DialogDelete/';
+import DialogEdit from '../Dialogs/DialogEdit/';
 import {
   Actions,
   CompaniesTableHeader,

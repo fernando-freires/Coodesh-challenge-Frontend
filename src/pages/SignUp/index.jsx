@@ -76,6 +76,7 @@ const SignUp = () => {
             <label>Repetir senha</label>
             <input
               type="password"
+              placeholder="Ex. password: User@1234"
               onChange={(e) => setPasswordConfirm(e.target.value)}
             />
           </InputText>

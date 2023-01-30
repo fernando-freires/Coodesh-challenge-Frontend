@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { IoMdArrowBack } from 'react-icons/io';
 import HeaderComponent from '../../components/Header';
 import LocationsTable from '../../components/LocationsTable';
-import { Context } from '../../context/AuthContext';
 import history from '../../history';
 import { Container, NoLocations } from './styles';
 
