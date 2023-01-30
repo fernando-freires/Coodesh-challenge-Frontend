@@ -1,12 +1,11 @@
 import React, { useContext } from 'react';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 
-import SignIn from './pages/SignIn';
-import SignUp from './pages/SignUp';
+import { Context } from './context/AuthContext';
 import Companies from './pages/Companies';
 import Locations from './pages/Locations';
-import { Login } from './pages/SignUp/styles';
-import { Context } from './context/AuthContext';
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
 
 function CustomRoute({ isPrivate, ...rest }) {
   const { loading, authenticated } = useContext(Context);

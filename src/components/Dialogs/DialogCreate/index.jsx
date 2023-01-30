@@ -4,10 +4,10 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import React, { useState } from 'react';
-import api from '../../../api';
-import { InputText } from './styles';
 import { IMaskInput } from 'react-imask';
+import api from '../../../api';
 import CustomizedSnackbars from '../../../components/Feedbacks';
+import { InputText } from './styles';
 
 export default function DialogCreate(props) {
   const [open, setOpen] = useState(false);

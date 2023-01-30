@@ -4,6 +4,7 @@ import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import React, { useState } from 'react';
+import { IMaskInput } from 'react-imask';
 import api from '../../../api';
 import Edit from '../../../assets/imgs/Edit.png';
 import CustomizedSnackbars from '../../Feedbacks';
@@ -13,12 +14,9 @@ export default function DialogEdit(props) {
   const [open, setOpen] = useState(false);
   const [type, setType] = useState(props.type);
 
-  const [companyName, setCompanyName] = useState(props.companyName);
-
   const [name, setName] = useState(props.companyName);
   const [website, setWebsite] = useState(props.companyWebsite);
   const [cnpj, setCnpj] = useState(props.companyCnpj);
-  const [local, setLocal] = useState({});
 
   const [state, setState] = useState(false);
 
@@ -96,8 +94,8 @@ export default function DialogEdit(props) {
 
             <InputText>
               <label>CNPJ</label>
-              <input
-                type="text"
+              <IMaskInput
+                mask="00.000.000/0000-00"
                 onChange={(e) => setCnpj(e.target.value)}
                 value={cnpj}
               />
@@ -131,7 +129,8 @@ export default function DialogEdit(props) {
 
             <InputText>
               <label>CEP</label>
-              <input
+              <IMaskInput
+                mask="00000-000"
                 type="text"
                 onChange={(e) => setCep(e.target.value)}
                 value={cep}
